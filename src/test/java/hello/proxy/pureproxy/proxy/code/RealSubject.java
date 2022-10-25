@@ -6,8 +6,9 @@ import lombok.extern.slf4j.Slf4j;
 public class RealSubject implements Subject {
     @Override
     public String operation() {
-        log.info("실제 객체 호출");
+        log.info("실제 객체 호출 전");
         sleep(1000);
+        log.info("실제 객체 호출 후");
         return "data";
     }
 

@@ -23,11 +23,11 @@ public class WebConfig implements WebMvcConfigurer {
     //     return filterRegistrationBean;
     // }
 
-    @Bean
-    public FilterRegistrationBean<Filter> readerFilter() {
-        FilterRegistrationBean<Filter> filter = new FilterRegistrationBean<>();
-        filter.setFilter(new ReaderFilter());
-        filter.addUrlPatterns("/*");
-        return filter;
-    }
+    // @Bean
+    // public FilterRegistrationBean<Filter> readerFilter() {
+    //     FilterRegistrationBean<Filter> filter = new FilterRegistrationBean<>();
+    //     filter.setFilter(new ReaderFilter());
+    //     filter.addUrlPatterns("/*");
+    //     return filter;
+    // }
 }

@@ -50,4 +50,10 @@ public class RedisBasicConfiguration {
         Resource script = new ClassPathResource("scripts/moneyTransfer.lua");
         return RedisScript.of(script, Boolean.class);
     }
+
+    @Bean
+    public RedisScript<Boolean> lateLimiter() {
+        Resource script = new ClassPathResource("scripts/rateLimiter.lua");
+        return RedisScript.of(script, Boolean.class);
+    }
 }

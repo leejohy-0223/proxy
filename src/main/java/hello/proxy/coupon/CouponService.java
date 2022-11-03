@@ -17,8 +17,8 @@ public class CouponService {
         this.redisTemplate = redisTemplate;
     }
 
-    public void transfer(String fromAccount, String toAccount, int amount) {
-        this.redisTemplate
+    public Object transfer(String fromAccount, String toAccount, int amount) {
+        return this.redisTemplate
             .execute(script, List.of(fromAccount, toAccount), String.valueOf(amount));
     }
 }

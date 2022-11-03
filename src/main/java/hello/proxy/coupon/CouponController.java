@@ -24,7 +24,8 @@ public class CouponController {
         redisTemplate.opsForHash().put("account", "B", "20");
 
         // transfer money with lua script
-        this.couponService.transfer("A", "B", 20);
+        Object results = this.couponService.transfer("A", "B", 20);
+        System.out.println("results = " + results);
 
         // check the result
         log.info("A result is = {}", redisTemplate.opsForHash().get("account", "A"));

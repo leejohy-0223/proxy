@@ -56,4 +56,10 @@ public class RedisBasicConfiguration {
         Resource script = new ClassPathResource("scripts/rateLimiter.lua");
         return RedisScript.of(script, Boolean.class);
     }
+
+    @Bean
+    public RedisScript<Boolean> couponLimiter() {
+        Resource script = new ClassPathResource("scripts/couponLimiter.lua");
+        return RedisScript.of(script, Boolean.class);
+    }
 }
